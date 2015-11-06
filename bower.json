@@ -1,5 +1,5 @@
 {
-  "name": "fs-lazyload",
+  "name": "lazy-img",
   "version": "1.0.3",
   "authors": [
     "Anonymous <anonymous@example.com>"
@@ -10,7 +10,7 @@
     "polymer",
     "seed"
   ],
-  "main": "fs-lazyload.html",
+  "main": "lazy-img.html",
   "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/<USERNAME>/seed-element/",
   "ignore": [

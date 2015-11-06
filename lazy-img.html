@@ -5,14 +5,14 @@ This element allows you to lazy load images as you scroll
 
 Example:
 
-    <img is='fs-lazyload' src='path/to/image.png'/>
+    <img is='lazy-img' src='path/to/image.png'/>
 
 @group Seed Elements
-@element fs-lazyload
+@element lazy-img
 @demo demo/index.html
 
 -->
-<dom-module id="fs-lazyload">
+<dom-module id="lazy-img">
 
   <template>
     <content></content>
@@ -37,7 +37,7 @@ Example:
 
   Polymer({
 
-    is: 'fs-lazyload',
+    is: 'lazy-img',
 
     extends: 'img',
 
@@ -85,12 +85,12 @@ Example:
       if (this.src !== this.original) this._clearScroll();
     },
     _handleScroll: function(e) {
-      this.debounce('fs-lazyload-check', function() {
+      this.debounce('lazy-img-check', function() {
         if (inViewport(this)) {
           this.src = this.original;
           this._clearScroll();
         }
-      }.bind(this), 100);
+      }.bind(this));
     },
     _clearScroll: function() {
       document.removeEventListener('scroll', this.listener);
