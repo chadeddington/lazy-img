@@ -1,6 +1,6 @@
 # lazy-img
 
-An element providing a starting point for your own reusable Polymer elements.
+An element that allows you to lazy load images as they come into view.
 
 
 ## Dependencies
