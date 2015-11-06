@@ -3,7 +3,7 @@
 A *Polymer* custom element that allows you to lazy load images as they come into view.
 
 ## Demo
-http://eddington-chad.github.io/lazy-img/demo/
+http://chadeddington.github.io/lazy-img/demo/
 
 
 ## Dependencies
