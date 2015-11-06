@@ -1,6 +1,6 @@
 # lazy-img
 
-An element that allows you to lazy load images as they come into view.
+A Polymer custom element that allows you to lazy load images as they come into view.
 
 
 ## Dependencies
