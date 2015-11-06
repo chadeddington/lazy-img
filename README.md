@@ -1,6 +1,6 @@
 # lazy-img
 
-A *Polymer* custom element that allows you to lazy load images as they come into view.
+A **Polymer** custom element that allows you to lazy load images as they come into view.
 
 ## Demo
 http://chadeddington.github.io/lazy-img/demo/
