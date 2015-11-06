@@ -28,6 +28,6 @@ And you can run it via:
     polyserve
 
 Once running, you can preview your element at
-`http://localhost:8080/components/fs-lazyload/`, where `fs-lazyload` is the name of the directory containing it.
+`http://localhost:8080/components/lazy-img/`, where `lazy-img` is the name of the directory containing it.
 
 
