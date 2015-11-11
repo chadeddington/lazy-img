@@ -53,11 +53,7 @@ Example:
     created: function() {
 
       // Create an empty image
-      fallbackImage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR42gEFAPr/AP///wAI/AL+Sr4t6gAAAABJRU5ErkJggg==";
-
-      // swap original src attribute
-      this.original = this.src;
-      this.src = fallbackImage;
+      this.fallbackImage = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAEElEQVR42gEFAPr/AP///wAI/AL+Sr4t6gAAAABJRU5ErkJggg==";
     },
 
     ready: function() {
@@ -67,6 +63,10 @@ Example:
     },
 
     attached: function() {
+      // swap original src attribute
+      this.original = this.src;
+      this.src = this.fallbackImage;
+
       // Our default listener task (for sanity's sake)
       this.listener = function() { /* noop */ };
       
