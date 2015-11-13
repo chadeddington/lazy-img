@@ -12,14 +12,6 @@ Example:
 @demo demo/index.html
 
 -->
-<dom-module id="lazy-img">
-
-  <template>
-    <content></content>
-  </template>
-
-</dom-module>
-
 <script>
 
   var inViewport = function(el) {
@@ -67,17 +59,14 @@ Example:
       this.original = this.src;
       this.src = this.fallbackImage;
 
-      // Our default listener task (for sanity's sake)
-      this.listener = function() { /* noop */ };
-      
       // Check if Element is in viewport      
       if (inViewport(this)) {
         // Set src if it is valid
         this.src = this.original;
       } else {
         // Register scroll listener if it is not
-        this.listener = this._handleScroll.bind(this);
-        document.addEventListener('scroll', this.listener);
+        this.listen(window, 'scroll', '_handleScroll');
+        this.listen(window, 'lazy-img-manual-scroll', '_handleScroll');
       }
     },
 
@@ -93,7 +82,8 @@ Example:
       }.bind(this));
     },
     _clearScroll: function() {
-      document.removeEventListener('scroll', this.listener);
+      this.unlisten(window, 'scroll', '_handleScroll');
+      this.unlisten(window, 'lazy-img-manual-scroll', '_handleScroll');
     }
   });
 
